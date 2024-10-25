@@ -1,0 +1,16 @@
+<div class="page">
+	<div class="body">
+		<h1>Body</h1>
+		<div *ngFor="let fleur of fleurs" class="displayer">
+			<app-fleur-card [fleur]="fleur" *ngIf="fleur.enStock" (acheter)="acheter($event)">
+			</app-fleur-card>
+		</div>
+	</div>
+
+	<h2>Votre panier : </h2>
+	<div *ngFor="let fleur of panier" class="displayer">
+		<app-fleur-card [fleur]="fleur" *ngIf="fleur.enStock" (acheter)="acheter($event)">
+		</app-fleur-card>
+		<button (click)="supprimer(fleur)">Supprimer</button>
+	</div>
+</div>

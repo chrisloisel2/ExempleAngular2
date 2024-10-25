@@ -1,0 +1,11 @@
+<div class="card">
+	<div class="card-header">
+		<h2>{{fleur.nom}}</h2>
+		<img [src]="fleur.image" alt="fleur" />
+		<p>{{fleur.description}}</p>
+		<p>prix : {{fleur.prix}}</p>
+		<button (click)="handleClick(fleur)">
+			Ajouter au panier
+		</button>
+	</div>
+</div>
